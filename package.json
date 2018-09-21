@@ -1,0 +1,29 @@
+{
+  "name": "dota-oracle",
+  "version": "1.0.0",
+  "description": "A DotA helper.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raeglan/dotaOracleFunction.git"
+  },
+  "keywords": [
+    "dota",
+    "oracle",
+    "helper",
+    "game"
+  ],
+  "author": "Rafael Miranda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raeglan/dotaOracleFunction/issues"
+  },
+  "homepage": "https://github.com/raeglan/dotaOracleFunction#readme",
+  "dependencies": {
+    "ask-sdk": "^2.0.9",
+    "npm": "^6.4.1"
+  }
+}
