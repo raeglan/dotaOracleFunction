@@ -2,7 +2,8 @@ const Alexa = require('ask-sdk');
 
 const LaunchRequestHandler = {
     canHandle(handlerInput) {
-        return handlerInput.requestEnvelope.request.type === 'LaunchRequest';
+        const request = handlerInput.requestEnvelope.request;
+        return request.type === 'LaunchRequest';
     },
     handle(handlerInput) {
         const speechText = 'Hey, welcome to the game.';
@@ -86,11 +87,11 @@ const ErrorHandler = {
 };
 
 exports.handler = Alexa.SkillBuilders.custom()
-            .addRequestHandlers(
-                LaunchRequestHandler,
-                RoshanDiedIntentHandler,
-                HelpIntentHandler,
-                CancelAndStopIntentHandler,
-                SessionEndedRequestHandler)
-            .addErrorHandlers(ErrorHandler)
-            .lambda();
+    .addRequestHandlers(
+        LaunchRequestHandler,
+        RoshanDiedIntentHandler,
+        HelpIntentHandler,
+        CancelAndStopIntentHandler,
+        SessionEndedRequestHandler)
+    .addErrorHandlers(ErrorHandler)
+    .lambda();
