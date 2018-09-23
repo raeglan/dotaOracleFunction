@@ -1,0 +1,16 @@
+# This is an appspec.yml template file for use with an AWS Lambda deployment in AWS CodeDeploy.
+# The lines in this template starting with the hashtag symbol are
+#   instructional comments and can be safely left in the file or
+#   ignored.
+# For help completing this file, see the "AppSpec File Reference" in the
+#   "AWS CodeDeploy User Guide" at
+#   https://docs.aws.amazon.com/codedeploy/latest/userguide/app-spec-ref.html
+version: 0.0.1
+Resources:
+  - dotaOracleFunction:
+      Type: AWS::Lambda::Function
+      Properties:
+        Name: "DotA Oracle Function" # Specify the name of your Lambda function
+        Alias: "Oracle"
+        CurrentVersion: "0.0.0" # Specify the current version of your Lambda function
+        TargetVersion: "0.0.1" # Specify the version of your Lambda function to deploy
