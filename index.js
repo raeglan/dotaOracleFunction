@@ -5,7 +5,7 @@ const Alexa = require('ask-sdk');
 function createSilentPause(numberOfMinutes) {
     let silentPause = '';
     for (let i = 0; i < numberOfMinutes; i++) {
-        silentPause += "<audio src='dota-oracle-sounds://1-minute-of-silence.mp3'/>"
+        silentPause += "<audio src='https://s3.amazonaws.com/dota-oracle-sounds/1-minute-of-silence.mp3'/>"
     }
 
     return silentPause;
@@ -36,7 +36,7 @@ const RoshanDiedIntentHandler = {
     handle(handlerInput) {
         const speechText =
             'Alright, Roshan just died. I will notify you when he lives again.' +
-            createSilentPause(3);
+            createSilentPause(3) + ' Roshan lives again. Hurray!';
         return handlerInput.responseBuilder
             .speak(speechText)
             .reprompt(speechText)
