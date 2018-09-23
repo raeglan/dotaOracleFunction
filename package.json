@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/raeglan/dotaOracleFunction#readme",
   "dependencies": {
-    "ask-sdk": "^2.0.9",
-    "npm": "^6.4.1"
+    "ask-sdk": "^2.0.9"
   }
 }
