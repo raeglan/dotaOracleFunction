@@ -85,20 +85,12 @@ const ErrorHandler = {
     },
 };
 
-// The created Alexa skill instance
-const skill = Alexa.SkillBuilders.custom()
-    .addRequestHandlers(
-        LaunchRequestHandler,
-        RoshanDiedIntentHandler,
-        HelpIntentHandler,
-        CancelAndStopIntentHandler,
-        SessionEndedRequestHandler)
-    .addErrorHandlers(ErrorHandler)
-    .create();
-
-exports.handler = async function(event, context) {
-    const response = await skill.invoke(event, context);
-    console.log(`RESPONSE++++${JSON.stringify(response)}`);
-
-    return response;
-};
+exports.handler = Alexa.SkillBuilders.custom()
+            .addRequestHandlers(
+                LaunchRequestHandler,
+                RoshanDiedIntentHandler,
+                HelpIntentHandler,
+                CancelAndStopIntentHandler,
+                SessionEndedRequestHandler)
+            .addErrorHandlers(ErrorHandler)
+            .lambda();
