@@ -9,7 +9,7 @@ const LaunchRequestHandler = {
         const speechText = 'Hey, welcome to the game.';
         const reprompt = 'I am here when you need me.';
 
-        return handlerInput.reponseBuilder
+        return handlerInput.responseBuilder
             .speak(speechText)
             .reprompt(reprompt)
             .withSimpleCard("DotA's Oracle", speechText)
