@@ -1,0 +1,40 @@
+{
+  "version": "1.0",
+  "session": {
+    "new": false,
+    "sessionId": "amzn1.echo-api.session.",
+    "application": {
+      "applicationId": "amzn1.ask.skill."
+    },
+    "user": {
+      "userId": "amzn1.ask.account."
+    }
+  },
+  "context": {
+    "System": {
+      "application": {
+        "applicationId": "amzn1.ask.skill.0f96ede4-2fc3-4274-ac2e-4966a00abe18"
+      },
+      "user": {
+        "userId": "amzn1.ask.account."
+      },
+      "device": {
+        "deviceId": "amzn1.ask.device.",
+        "supportedInterfaces": {}
+      },
+      "apiEndpoint": "https://api.eu.amazonalexa.com",
+      "apiAccessToken": "..-"
+    }
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "amzn1.echo-api.request.",
+    "timestamp": "2018-09-23T14:42:41Z",
+    "locale": "en-GB",
+    "intent": {
+      "name": "RoshanDiedIntent",
+      "confirmationStatus": "NONE"
+    },
+    "dialogState": "STARTED"
+  }
+}
