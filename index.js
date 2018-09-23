@@ -93,7 +93,8 @@ const skill = Alexa.SkillBuilders.custom()
         HelpIntentHandler,
         CancelAndStopIntentHandler,
         SessionEndedRequestHandler)
-    .addErrorHandlers(ErrorHandler);
+    .addErrorHandlers(ErrorHandler)
+    .create();
 
 exports.handler = async function(event, context) {
     const response = await skill.invoke(event, context);
