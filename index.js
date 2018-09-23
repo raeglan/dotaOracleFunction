@@ -39,7 +39,7 @@ const RoshanDiedIntentHandler = {
             createSilentPause(3);
         return handlerInput.responseBuilder
             .speak(speechText)
-            .repromt(speechText)
+            .reprompt(speechText)
             .getResponse();
     }
 };
