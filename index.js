@@ -1,5 +1,16 @@
 const Alexa = require('ask-sdk');
 
+// Helper functions
+
+function createSilentPause(numberOfMinutes) {
+    let silentPause = '';
+    for (let i = 0; i < numberOfMinutes; i++) {
+        silentPause += "<audio src='dota-oracle-sounds://1-minute-of-silence.mp3'/>"
+    }
+
+    return silentPause;
+}
+
 const LaunchRequestHandler = {
     canHandle(handlerInput) {
         const request = handlerInput.requestEnvelope.request;
@@ -23,9 +34,12 @@ const RoshanDiedIntentHandler = {
             handlerInput.requestEnvelope.request.intent.name === 'RoshanDiedIntent';
     },
     handle(handlerInput) {
-        const speechText = 'Alright, Roshan just died. Thanks for the information.';
+        const speechText =
+            'Alright, Roshan just died. I will notify you when he lives again.' +
+            createSilentPause(3);
         return handlerInput.responseBuilder
             .speak(speechText)
+            .repromt(speechText)
             .getResponse();
     }
 };
